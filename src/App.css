@@ -1,4 +1,3 @@
-
 /* PRELOADER */
 
 .preloader {
@@ -27,7 +26,9 @@
   place-items: center;
   border: 2px solid var(--gold);
   color: var(--gold);
-  font: 600 38px "Playfair Display", serif;
+  font:
+    600 38px "Playfair Display",
+    serif;
   transform: rotate(45deg);
   animation: logo-intro 0.8s ease;
 }
@@ -68,8 +69,12 @@
 }
 
 @keyframes progress {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes logo-intro {
@@ -119,7 +124,9 @@
   color: var(--gold);
   display: grid;
   place-items: center;
-  font: 600 26px "Playfair Display", serif;
+  font:
+    600 26px "Playfair Display",
+    serif;
 }
 
 .brand strong {
@@ -261,7 +268,9 @@
   border-radius: 4px;
   font-size: 13px;
   font-weight: 700;
-  transition: transform 0.3s, background 0.3s;
+  transition:
+    transform 0.3s,
+    background 0.3s;
 }
 
 .button-gold {
@@ -324,8 +333,7 @@
   height: 560px;
   min-width: 0;
   border-radius: 12px;
-  background:
-    radial-gradient(circle at 50% 50%, #8b60ad40, transparent 65%);
+  background: radial-gradient(circle at 50% 50%, #8b60ad40, transparent 65%);
 }
 
 .hero-visual canvas {
@@ -403,7 +411,9 @@
 .section-heading h2,
 .about-section h2,
 .contact-section h2 {
-  font: 600 clamp(32px, 4vw, 48px) "Playfair Display", serif;
+  font:
+    600 clamp(32px, 4vw, 48px) "Playfair Display",
+    serif;
   line-height: 1.2;
   margin: 17px 0;
   color: var(--purple);
@@ -428,7 +438,9 @@
   background: white;
   border: 1px solid #e8e1ee;
   border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .service-card:hover {
@@ -459,7 +471,9 @@
 }
 
 .service-card h3 {
-  font: 600 24px "Playfair Display", serif;
+  font:
+    600 24px "Playfair Display",
+    serif;
   margin-bottom: 13px;
 }
 
@@ -495,12 +509,7 @@
 
 .skeleton-shape,
 .skeleton-line {
-  background: linear-gradient(
-    90deg,
-    #eeeaf2 25%,
-    #f8f6fa 50%,
-    #eeeaf2 75%
-  );
+  background: linear-gradient(90deg, #eeeaf2 25%, #f8f6fa 50%, #eeeaf2 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 5px;
@@ -527,7 +536,9 @@
 }
 
 @keyframes shimmer {
-  to { background-position: -200% 0; }
+  to {
+    background-position: -200% 0;
+  }
 }
 
 /* ABOUT */
@@ -581,7 +592,9 @@
 }
 
 .why-grid h3 {
-  font: 600 22px "Playfair Display", serif;
+  font:
+    600 22px "Playfair Display",
+    serif;
   margin: 22px 0 12px;
 }
 
@@ -765,7 +778,6 @@
   }
 }
 
-
 /* Prevent service cards from overlapping the heading */
 .services-heading {
   position: relative;
@@ -788,7 +800,6 @@
   z-index: 2;
   transform: translateY(-5px);
 }
-
 
 /* ABOUT SECTION */
 
@@ -820,7 +831,7 @@
   position: absolute;
   width: 380px;
   height: 380px;
-  background: rgba(67, 31, 111, 0.10);
+  background: rgba(67, 31, 111, 0.1);
   border-radius: 50%;
   filter: blur(65px);
 }
@@ -845,7 +856,7 @@
 .about-visual-card::after {
   position: absolute;
   content: "";
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
 
@@ -1207,7 +1218,6 @@
   margin-bottom: 20px;
 }
 
-
 /* SERVICES — SCROLL-PINNED LAYOUT FIX */
 
 @media (min-width: 768px) {
@@ -1333,12 +1343,7 @@
 .scroll-progress-bar {
   height: 100%;
   width: 0;
-  background: linear-gradient(
-    90deg,
-    #431f6f,
-    #8b5bc5,
-    #eeb32b
-  );
+  background: linear-gradient(90deg, #431f6f, #8b5bc5, #eeb32b);
   box-shadow: 0 0 10px rgba(139, 91, 197, 0.45);
   transition: width 0.08s linear;
 }
@@ -1400,7 +1405,6 @@
   isolation: isolate;
 }
 
-
 /* Animated light border for About card */
 
 .about-visual-card {
@@ -1443,4 +1447,56 @@
   );
 
   opacity: 1;
+}
+
+/* MOBILE SPACING FIX — HERO + SERVICES */
+
+@media (max-width: 767px) {
+  /* Hero: allow content to determine section height */
+  .tunnel-hero {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    padding: 55px 6% 45px;
+    display: block;
+  }
+
+  .tunnel-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 35px 0 25px;
+    transform: none;
+  }
+
+  .tunnel-caption {
+    position: relative;
+    margin-top: 25px;
+  }
+
+  /* Services: reduce excess vertical spacing */
+  .services-section.services-scroll-section {
+    height: auto;
+    min-height: 0;
+    padding: 55px 6%;
+    display: block;
+    overflow: visible;
+  }
+
+  .services-scroll-section .services-heading {
+    margin: 0 auto 35px;
+  }
+
+  .services-scroll-section .services-grid {
+    padding-top: 0;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .services-scroll-section .service-card {
+    padding: 25px;
+  }
+
+  .services-scroll-section .service-card p {
+    min-height: 0;
+  }
 }
