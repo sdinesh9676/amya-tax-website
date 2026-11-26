@@ -1,0 +1,50 @@
+
+.border-trail-container {
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.border-trail-container::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 300deg,
+    #9b6810 315deg,
+    #eeb32b 330deg,
+    #fff1b8 340deg,
+    #eeb32b 350deg,
+    transparent 360deg
+  );
+
+  animation: goldBorderTrail 3s linear infinite;
+}
+
+@keyframes goldBorderTrail {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .border-trail-container::before {
+    animation: none;
+  }
+}
