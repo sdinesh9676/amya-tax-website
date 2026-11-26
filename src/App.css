@@ -1548,3 +1548,27 @@
     min-height: 0;
   }
 }
+
+/* ABOUT SECTION — TOUCH DEVICE VERTICAL LAYOUT */
+
+@media (hover: none) and (pointer: coarse) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-visual {
+    min-height: 400px;
+    width: 100%;
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .about-values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
