@@ -1500,3 +1500,51 @@
     min-height: 0;
   }
 }
+
+
+/* TOUCH DEVICES — DESKTOP SITE LAYOUT FIX */
+
+@media (hover: none) and (pointer: coarse) {
+  .tunnel-hero {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    padding: 55px 6% 45px;
+    display: block;
+  }
+
+  .tunnel-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 35px 0 25px;
+    transform: none;
+  }
+
+  .services-section.services-scroll-section {
+    height: auto;
+    min-height: 0;
+    padding: 55px 6%;
+    display: block;
+    overflow: visible;
+  }
+
+  .services-scroll-section .services-heading {
+    margin: 0 auto 35px;
+  }
+
+  .services-scroll-section .services-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-top: 0;
+    gap: 18px;
+  }
+
+  .services-scroll-section .service-card {
+    display: block;
+    padding: 25px;
+  }
+
+  .services-scroll-section .service-card p {
+    min-height: 0;
+  }
+}
