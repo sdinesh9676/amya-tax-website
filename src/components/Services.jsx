@@ -74,7 +74,7 @@ export default function Services() {
     const mm = gsap.matchMedia();
 
     // Desktop: pin the section and connect card reveals to scrolling.
-    mm.add("(min-width: 768px)", () => {
+    mm.add("(min-width: 768px) and (hover: hover) and (pointer: fine)", () => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: section,
