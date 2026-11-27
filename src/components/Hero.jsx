@@ -9,6 +9,7 @@ import {
 import TunnelScene from "./TunnelScene";
 import { TextEffect } from "./TextEffect";
 
+
 export default function Hero({ onSceneReady }) {
   const [sceneReady, setSceneReady] = useState(false);
 
